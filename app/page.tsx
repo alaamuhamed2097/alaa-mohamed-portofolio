@@ -115,10 +115,13 @@ export default function Home() {
                   <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">Oct 2023 – Present</p>
                 </div>
                 <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li>Lead a 5-person backend team and own the architecture of two live e-commerce platforms (Egypt & Jordan).</li>
-                  <li>Designed the order workflow as a single atomic transaction with RabbitMQ handling all side-effects asynchronously.</li>
-                  <li>Cut an e-learning student dashboard from ~20s to under 4s (300+ concurrent users) via endpoint split, precomputed stats, Redis caching, and targeted indexing.</li>
-                  <li>Set and enforce team standards: Clean Architecture, DDD, CQRS, code review process, and architectural decision records.</li>
+                  <li>Lead a cross-functional team of 5 (2 backend, 1 frontend, 1 mobile) — owning architecture decisions, technical direction, and task distribution.</li>
+                  <li>Designed the architecture from scratch for two live e-commerce platforms (Egypt & Jordan) — a multi-vendor marketplace and a fashion-retail store — covering backend, data model, service boundaries, and Redis-backed caching.</li>
+                  <li>Architected the order-creation workflow to persist the order, shipments, and payment in a single atomic transaction, while offloading notifications, email, and SMS to RabbitMQ so side-effects never block the core order.</li>
+                  <li>Diagnosed and resolved a ~20s performance bottleneck on an e-learning student dashboard (~300 concurrent users) by splitting an overloaded endpoint, precomputing heavy stats, and adding caching + targeted indexes — cutting response time by over 5×.</li>
+                  <li>Integrated multiple payment gateways (Stripe, PayPal, Paymob, Fawaterak, HyperPay / CopyAndPay) and WhatsApp messaging via Twilio across projects.</li>
+                  <li>Designed gamification systems — badges, leaderboards, ranking, and virtual currency — for an MLM platform (Riseon).</li>
+                  <li>Run technical interviews and code reviews to keep quality and delivery consistent. Also contributed to Riseon (MLM), Wasiitk (classifieds), and Property-Search (real estate).</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -133,8 +136,10 @@ export default function Home() {
                   <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">2018 – 2023</p>
                 </div>
                 <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li>Delivered full-stack .NET solutions for multiple clients across various domains.</li>
-                  <li>Built and maintained APIs, integrated third-party services, and handled database design and optimization.</li>
+                  <li>Delivered custom web and mobile applications for clients across HR, education, real estate, e-commerce, and business management.</li>
+                  <li>Built cross-platform mobile apps with .NET MAUI and Xamarin Forms, and full-stack systems with ASP.NET Core and Blazor.</li>
+                  <li>Implemented GPS tracking, admin dashboards, real-time features (SignalR), and external authentication (Google / Facebook).</li>
+                  <li>Collaborated with academic teams on gamified systems supporting postgraduate research projects.</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -222,9 +227,11 @@ export default function Home() {
                     <span className="relative z-10 text-4xl font-bold text-white opacity-60">🏪</span>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300">
-                    A reference architecture for a marketplace built with Modular Monolith, Domain-Driven Design,
-                    CQRS via MediatR, and RabbitMQ for cross-module events. Written to be the kind of codebase you
-                    can hand to a new engineer and they understand it within a day.
+                    Self-initiated architecture project built to practice production-style design: Clean Architecture,
+                    DDD, Modular Monolith, CQRS (MediatR), and message-driven workflows via RabbitMQ. Implements
+                    Catalog and User Management modules with rich domain models, aggregates, and domain events.
+                    Includes JWT auth with refresh-token rotation, role-based access, soft-delete with audit trails,
+                    health checks, rate limiting, structured logging (Serilog), and unit / integration tests.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {["Modular Monolith", "DDD", "CQRS", "MediatR", "RabbitMQ", "C#"].map((tag) => (
@@ -304,12 +311,12 @@ export default function Home() {
                     <span className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-2">
                       <span className="text-green-600 dark:text-green-300 text-sm font-bold">MSG</span>
                     </span>
-                    Messaging & Caching
+                    Messaging, Caching & Real-time
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    {["RabbitMQ", "Redis", "Event-Driven Design", "Async Workflows", "Background Jobs", "Message Queues"].map((s) => (
+                    {["RabbitMQ", "Redis", "SignalR", "Event-Driven Design", "Async Workflows", "Background Jobs"].map((s) => (
                       <Badge key={s} variant="secondary" className="justify-center py-2 hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors">{s}</Badge>
                     ))}
                   </div>
@@ -322,14 +329,14 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <span className="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center mr-2">
-                      <span className="text-orange-600 dark:text-orange-300 text-sm font-bold">OPS</span>
+                      <span className="text-orange-600 dark:text-orange-300 text-sm font-bold">INT</span>
                     </span>
-                    Infrastructure & Tools
+                    Integrations & Tooling
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    {["Docker", "Git / GitHub", "Azure (learning)", "Postman", "Performance Profiling", "SQL Indexing"].map((s) => (
+                    {["Stripe / PayPal", "Paymob / Fawaterak", "HyperPay", "Twilio WhatsApp", "Google / Facebook Auth", "Docker", "xUnit", "Postman"].map((s) => (
                       <Badge key={s} variant="secondary" className="justify-center py-2 hover:bg-orange-100 dark:hover:bg-orange-900/50 transition-colors">{s}</Badge>
                     ))}
                   </div>
@@ -384,9 +391,16 @@ export default function Home() {
 
           <div>
             <AnimatedSection direction="right" delay={0.3}>
-              <h3 className="text-2xl font-bold mb-6">Certifications & Awards</h3>
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-md text-gray-600 dark:text-gray-400 italic">
-                No certifications listed yet — add yours when ready.
+              <h3 className="text-2xl font-bold mb-6">Languages</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <h4 className="font-semibold">Arabic</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Native</p>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <h4 className="font-semibold">English</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Professional</p>
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -405,6 +419,12 @@ export default function Home() {
               <div className="space-y-6">
                 <h3 className="text-xl font-semibold">Contact Information</h3>
                 <div className="space-y-4">
+                  <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
+                    <span className="w-5 h-5 text-purple-600 mr-3 flex items-center justify-center text-sm font-bold">📞</span>
+                    <a href="tel:+201094002482" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                      +20 109 400 2482
+                    </a>
+                  </div>
                   <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                     <Mail className="w-5 h-5 text-purple-600 mr-3" />
                     <a
