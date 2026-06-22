@@ -4,7 +4,6 @@ import { Github, Linkedin, Mail, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ContactForm } from "@/components/contact-form"
 import { Navbar } from "@/components/navbar"
 import { ScrollIndicator } from "@/components/scroll-indicator"
 import { SmoothScroll } from "@/components/smooth-scroll"
@@ -414,8 +413,8 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection direction="left" delay={0.2}>
+          <div className="max-w-xl mx-auto">
+            <AnimatedSection direction="up" delay={0.2}>
               <div className="space-y-6">
                 <h3 className="text-xl font-semibold">Contact Information</h3>
                 <div className="space-y-4">
@@ -462,12 +461,6 @@ export default function Home() {
                     I'm always open to discussing new projects, opportunities, or partnerships. Feel free to reach out!
                   </p>
                 </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection direction="right" delay={0.3}>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                <ContactForm />
               </div>
             </AnimatedSection>
           </div>
