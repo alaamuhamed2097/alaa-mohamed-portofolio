@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Mail, ExternalLink, Download, ArrowDown } from 'lucide-react'
+import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
 
@@ -13,9 +13,9 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">
             <div>
-              <AnimatedText text="Muhammad Murad" className="text-4xl md:text-5xl font-bold tracking-tight" />
+              <AnimatedText text="Alaa Mohamed" className="text-4xl md:text-5xl font-bold tracking-tight" />
               <AnimatedText
-                text="AI Engineer"
+                text="Senior .NET Developer · Team Lead"
                 className="text-2xl md:text-3xl font-semibold mt-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
                 once={true}
               />
@@ -26,8 +26,8 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Specializing in machine learning, deep learning, and data science with expertise in deploying AI
-              solutions and integrating LLM APIs.
+              I care about backend systems that stay clean as they grow — boundaries that hold, workflows that are
+              honest about consistency, and code other engineers can read a year later.
             </ClientMotion>
             <ClientMotion
               className="flex flex-wrap gap-4"
@@ -48,7 +48,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="secondary" asChild className="relative overflow-hidden group">
-                <Link href="/documents/muhammad-murad-resume.pdf" target="_blank" download>
+                <Link href="/documents/alaa-mohamed-resume.pdf" target="_blank" download>
                   <Download className="w-4 h-4 mr-2" />
                   <span className="relative z-10">Resume</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
@@ -62,28 +62,21 @@ export function HeroSection() {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <Link
-                href="https://linkedin.com/in/murad-pitafi"
+                href="https://linkedin.com/in/alaa-mohamed-879966321"
                 target="_blank"
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors transform hover:scale-110 duration-300"
               >
                 <Linkedin className="w-6 h-6" />
               </Link>
               <Link
-                href="https://github.com/murad-pitafi"
+                href="https://github.com/alaamuhamed2097"
                 target="_blank"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
               >
                 <Github className="w-6 h-6" />
               </Link>
               <Link
-                href="https://kaggle.com/muradpitafi"
-                target="_blank"
-                className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors transform hover:scale-110 duration-300"
-              >
-                <ExternalLink className="w-6 h-6" />
-              </Link>
-              <Link
-                href="mailto:pitafimurad99@gmail.com"
+                href="mailto:contact@alaa-mohamed.com"
                 className="text-gray-600 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors transform hover:scale-110 duration-300"
               >
                 <Mail className="w-6 h-6" />
@@ -102,7 +95,7 @@ export function HeroSection() {
             }}
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-              <Image src="/images/profile.png" alt="Muhammad Murad" fill className="object-cover" priority />
+              <Image src="/images/profile.png" alt="Alaa Mohamed" fill className="object-cover" priority />
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-blue-600/20 mix-blend-overlay" />
             </div>
           </ClientMotion>
