@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { AnimatedText, ClientMotion } from "@/components/client-animations"
+import { ClientMotion } from "@/components/client-animations"
 
 export function HeroSection() {
   return (
@@ -13,12 +13,12 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">
             <div>
-              <AnimatedText text="Alaa Mohamed" className="text-4xl md:text-5xl font-bold tracking-tight" />
-              <AnimatedText
-                text="Senior .NET Developer · Team Lead"
-                className="text-2xl md:text-3xl font-semibold mt-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
-                once={true}
-              />
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-700">
+                Alaa Mohamed
+              </h1>
+              <p className="text-2xl md:text-3xl font-semibold mt-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+                Senior .NET Developer · Team Lead
+              </p>
             </div>
             <ClientMotion
               className="text-lg text-gray-600 dark:text-gray-300"
