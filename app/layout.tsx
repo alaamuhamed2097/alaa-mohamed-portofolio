@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 const siteUrl = "https://alaa-mohamed.com"
 const title = "Alaa Mohamed | Senior .NET Developer & Team Lead"
 const description =
-  "Portfolio of Alaa Mohamed, Senior .NET Developer and Team Lead specializing in clean backend architecture, DDD, and scalable systems"
+  "Senior .NET Developer & Team Lead — clean backend architecture, DDD, and scalable systems."
 
 // These are public values (they appear in the page source anyway), so they are
 // baked in as defaults and work on every build with no hosting config needed.
