@@ -13,11 +13,14 @@ const title = "Alaa Mohamed | Senior .NET Developer & Team Lead"
 const description =
   "Portfolio of Alaa Mohamed, Senior .NET Developer and Team Lead specializing in clean backend architecture, DDD, and scalable systems"
 
-// Set these in your environment (e.g. .env.local or your hosting dashboard).
+// These are public values (they appear in the page source anyway), so they are
+// baked in as defaults and work on every build with no hosting config needed.
+// An env var, if set, takes precedence.
 // Google Search Console verification code (the "content" value of the meta tag).
-const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+const googleSiteVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "uTSJKYos8erNqymBeR6GNTjOsX7BCu0S1DlBkVBfi74"
 // Google Analytics 4 Measurement ID, e.g. "G-XXXXXXXXXX".
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID ?? "G-NGNCXSTJXG"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
